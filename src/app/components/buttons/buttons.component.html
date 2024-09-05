@@ -1,0 +1,32 @@
+<div class="d-flex justify-content-around p-1 pb-0">
+        @if (parent == "userCard") {
+        <div class="d-flex flex-column">
+            <a [routerLink]="['/home/users/', currentUserId]" class="d-flex flex-column">
+                <span class="material-symbols-outlined icon">account_circle</span>
+                <p class="text-xs">Detalles</p>
+            </a>
+        </div>
+    } @else if (parent == "userView"){
+        <div class="d-flex flex-column">
+            <a [routerLink]="['/home']" class="d-flex flex-column">
+                <span class="material-symbols-outlined icon">arrow_back</span>
+                <p class="text-xs">Volver</p>
+            </a>
+        </div>
+    }
+    <div class="d-flex flex-column ">
+        <a [routerLink]="['/home/users/updateuser',currentUserId]" class="d-flex flex-column">
+            <span class="material-symbols-outlined icon">update</span>
+            <p class="text-xs mb-0">Actualizar</p>
+        </a>
+    </div>
+
+    <div class="d-flex flex-column">
+        <a class="d-flex flex-column" data-bs-toggle="modal" [attr.data-bs-target]="'#confirmDeleteModal'+currentUserId">
+            <span class="material-symbols-outlined icon">delete</span>
+            <p class="text-xs">Eliminar</p>
+        </a>
+        
+        <app-delete-modal [currentUserId]="currentUserId" ></app-delete-modal>
+    </div>
+</div>

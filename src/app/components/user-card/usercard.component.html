@@ -1,0 +1,14 @@
+<div class="card shadow h-100 d-flex flex-column">
+    <img src="{{currentUser.image}}" class="rounded-circle shadow m-3 img-fluid" alt="{{currentUser.first_name}} {{currentUser.last_name}}">
+    
+    <div class="card-body p-2 pt-3 flex-grow-1">
+        <h5 class="card-title fw-bold text-center">{{currentUser.first_name}} {{currentUser.last_name}}</h5>
+        <p class="card-text text-center">{{currentUser.description}}</p>
+    </div>
+    
+        <div class="card-footer text-center mt-auto">
+        <app-buttons [parent]="'userCard'" [currentUserId]="currentUser._id"></app-buttons>
+    </div>
+</div>
+
+

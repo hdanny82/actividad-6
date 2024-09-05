@@ -1,0 +1,15 @@
+.pages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.pages .btn {
+    font-size: 1.25rem;
+}
+
+.pages p {
+    margin: 0 10px;
+    font-size: 1.25rem;
+}

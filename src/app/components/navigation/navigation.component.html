@@ -1,0 +1,21 @@
+<nav class="container navbar navbar-expand-lg bg-light sticky-top py-2 border-bottom border-secondary border-2 shadow-sm" data-bs-theme="light">
+  <div class="container-fluid p-0">
+    <a class="navbar-brand d-flex align-items-center p-0" [routerLink]="['/home']" (click)="goToFirstPage()">
+      <img src="https://www.svgrepo.com/show/286216/users-user.svg" alt="Logo" height="30" class="d-inline-block align-text-top me-3 bg-light rounded">
+      <h2 class="text-secondary m-0">Listado.com</h2>
+    </a>
+    <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link fw-bold text-danger" routerLinkActive="active" [routerLink]="['/home']" (click)="goToFirstPage()" aria-label="Ir a Home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-bold" routerLinkActive="active" [routerLink]="['/home/users/newuser']" aria-label="Ir a Nuevo Usuario">Nuevo Usuario</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

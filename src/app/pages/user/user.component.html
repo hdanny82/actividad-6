@@ -1,0 +1,28 @@
+@if (this.currentUser == undefined && !this.error) {
+<article class="col col-12 col-md-4 col-lg-3 gap-0 mb-3">
+    <div class="col col-12 card placeholder-glow p-3">
+        <img src="..." class="rounded-circle placeholder" alt="...">
+        <h5 class="placeholder-glow mt-3"> <span class="placeholder col-8"></span> </h5>
+        <p class="placeholder-glow"> <span class="placeholder col-10"></span> <p>
+    </div>
+    </article>
+
+}@else if (this.error){
+    <h2 class="text-secondary">Ha habido un problema en la carga del usuario</h2>
+    <a [routerLink]="['/home']" class="btn btn-outline-danger m-3">Volver al inicio</a>
+
+} @else {
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-6 col-lg-4 p-3 border-m">
+            <img class="rounded-circle shadow" src="{{currentUser.image}}" alt="">
+        </div>
+        <div class="col-md-6 col-lg-4 p-3 justify">
+            <h1 class="text-secondary text-align ">{{currentUser.first_name}}</h1>
+            <h1 class="text-secondary text-align">{{currentUser.last_name}}</h1>
+            <p class="text-align"><span class="fw-bold">Nombre usuario: </span>{{currentUser.username}} </p>
+            <p class="text-align"><span class="fw-bold">email: </span>{{currentUser.email}} </p>
+            <app-buttons [parent]="'userView'" [currentUserId]="currentUser._id" ></app-buttons>
+        </div>
+    </div>
+    
+}

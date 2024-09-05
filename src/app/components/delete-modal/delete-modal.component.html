@@ -1,0 +1,22 @@
+<div class="modal fade" [id]="'confirmDeleteModal'+currentUserId" tabindex="-1" aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content shadow-lg border-0">
+            <div class="modal-header bg-danger text-white">
+                <h1 class="modal-title fs-5 d-flex align-items-center" [id]="'confirmDeleteModalLabel'+currentUserId">
+                    
+                    <span class="material-symbols-outlined me-2">warning</span>
+                    ¡Advertencia!
+                </h1>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <p class="lead">Estás a punto de eliminar un usuario.</p> 
+                <p class="mb-0">Esta acción es irreversible. ¿Quieres continuar con el borrado?</p> 
+            </div>
+            <div class="modal-footer border-0">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-danger" (click)="deleteUser(currentUserId)">Eliminar</button>            
+            </div>
+        </div>
+    </div>
+</div>
